@@ -1,0 +1,862 @@
+:root{
+    --main-color:#CAF71A;
+    --secondary-color:#1E2939;
+    --section-padding: 96px;
+    --transition: all 0.3s ease-in-out;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.main-title {
+font-family: "Days One", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: "Days One", sans-serif;
+}
+body{
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+img{
+    width: 100%;
+    margin-inline: auto;   
+    display: block;
+}
+
+/* <!-- =================start nav================= --> */
+
+
+.custom-navbar{
+    background-color: #0B0E13;
+}
+.custom-navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner1 .navbar-brand {
+    color:#cbfe1c
+}
+.inner1 h1{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.inner1 .fa-gamepad {
+    color: #cbfe1c;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.navbar-collapse a{
+    color: white;
+}
+.navbar-collapse a:hover{
+    color: #cbfe1c ;
+}
+.navbar-collapse .nav-link.active:hover {
+    color: #cbfe1c;
+}
+.inner2 i {
+    font-size: 20px;
+    color: white;
+}
+.inner2 button{
+    background-color: #0B0E13;
+    border: none;
+    padding: 10px;
+}
+.inner2 .btn{
+    background-color:#cbfe1c ;
+    border: 1px solid #cbfe1c;
+    border-radius: 6px;
+    font-weight: bold;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.inner2 .btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transform: skew(-20deg);
+
+}
+.inner2 .btn:hover::before{
+    left: 150%;
+    transition: left 0.7s ease;
+}
+.inner2 .btn::before {
+    transition: left 0.7s ease;
+}
+#navbarSupportedContent {
+   flex-grow: 0;
+   margin-left: auto;
+}
+/* <!-- =================end nav================= --> */
+/* <!-- =================start hero section================= --> */
+.hero-section{
+    background-image:
+    Linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9)
+    ),
+    url("../imgs/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+
+.hero-section .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.about-content span{
+    color: #cbfe1c;
+    
+}
+.about-content h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.about-content .btn{
+    overflow: hidden;
+    position: relative;
+}
+.about-content .primary-btn{
+    background-color:#cbfe1c ;
+    border: 1px solid #cbfe1c;
+    border-radius: 6px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+}
+.about-content button.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transform: skew(-20deg);
+    transition: left 0.7s ease;
+
+}
+.about-content .btn-outline-light{
+    color: #cbfe1c;
+    border-color: #cbfe1c;
+    font-weight: bold;
+    font-size: 16px;
+}
+.about-content .btn-outline-light:hover{
+    background-color: #cbfe1c;
+    color: #0B0E13;
+    border-color: #cbfe1c;
+}
+.about-content .btn:hover::before{
+    left: 150%;
+}
+.about-content button{
+    width: 200px;
+    padding: 15px 20px;   
+}
+ /* <!-- =================contant img================ --> */
+.hero-section .img-content{
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid #cbfe1c;
+    padding: 0;
+    position: relative;
+}
+.hero-section .img-content img{
+    height: 350px;
+    object-fit: cover;
+}
+.hero-section .img-content .active-players{
+    position: absolute;
+    bottom: -50px;
+    left: 50px;
+    transform: translateX(-50%);
+    background-color: #0B0E13;
+    color: white;
+    padding:24px;
+    border-radius: 10px;
+    border: 2px solid #212733;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: start;
+}
+.hero-section .active-players i{
+    color: #cbfe1c;
+    font-size: 20px;
+}
+.hero-section .active-players .info p{
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #7F8693;
+}
+.hero-section .active-players .info span{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* --------------media queries -------------- */
+@media (max-width: 991.98px) {
+    #navbarSupportedContent {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 0;
+    }
+
+    #navbarSupportedContent .navbar-nav {
+        flex-direction: column;
+    }
+
+    #navbarSupportedContent .inner2 {
+        margin: 10px 0 0 !important;
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+}
+
+/*  <!-- ==============start latest games ========== --> */
+.latest-games {
+    background-color: #0B0E13;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-block: var(--section-padding);
+}
+.latest-games .header{
+    margin-bottom: 50px;
+}
+.latest-games .header p{
+    color: #cbfe1c;
+    font-size: 16px ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.latest-games .header p::before,
+.latest-games .header p::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #cbfe1c;
+}
+.latest-games .header p::before {
+    clip-path: polygon(0 50%, 15% 0, 100% 0, 100% 100%, 15% 100%);
+     background: linear-gradient(to left, #cbfe1c, transparent);
+}
+.latest-games .header p::after {
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+     background: linear-gradient(to right, #cbfe1c, transparent);
+}
+.latest-games .header h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+/* ============= start cards================ */
+.latest-games .card{
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.latest-games .card .card-img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+.latest-games .card .card-body{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+} 
+.latest-games .card .card-img-overlay{
+    background: linear-gradient(to top, rgba(203, 254, 28, 0.8), transparent);
+    padding: 20px;
+    text-align: start;
+    border-radius: 10px ;
+    border: 2px solid #cbfe1c;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.latest-games .card:hover .card-img-overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.latest-games .card .card-img-overlay h5{
+    font-size: 18px;
+    font-weight: bold;
+    color: #0B0E13;
+    margin-top: auto;
+
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.latest-games .card:hover .card-img-overlay h5{
+    transform: translateY(0);
+    opacity: 1;
+}
+.latest-games .card .card-img-overlay i{
+    color: #cbfe1c;
+    font-size: 10px;
+    margin-left: 0;
+}
+.latest-games .card .card-img-overlay p{
+    margin: 0;
+}
+.latest-games .card .card-img-overlay span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 2px 12px;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: bold;
+
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.latest-games .card:hover .card-img-overlay span {
+    transform: translateY(0);
+    opacity: 1;
+}
+.latest-games .card:hover .card-img {
+    transform: scale(1.1);
+}
+/* ==================media============== */
+@media (max-width: 576px) {
+    .game-page > div:not(:first-child) {
+        display: none;
+    }
+}
+/* ======================== btns ======================= */
+.latest-games .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}   
+.latest-games  .btns .primary-btn {
+    border: 2px solid #7F8693;
+    border-radius: 50%;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.latest-games .btns .primary-btn i{
+    color:#7F8693 ;
+    font-size: 25px;
+    text-align: center;
+}
+.latest-games .btns .primary-btn:hover i{
+    color: #cbfe1c;
+}
+.latest-games .btns .primary-btn:hover{
+    border-color: #cbfe1c;
+}
+.latest-games .btns .btn-outline-light{
+    color: #cbfe1c;
+    border-color: #cbfe1c;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 25px;
+}
+.latest-games .btns .btn-outline-light:hover{
+    background-color: #cbfe1c;
+    color: #0B0E13;
+    border-color: #cbfe1c;
+} 
+.game-slider {
+    overflow: hidden;
+    width: 100%;
+}
+.game-page{
+    min-width: 0;
+}
+
+/*  <!-- ======end latest games ====== --> */
+
+/* <!-- ================start WHAT WE DO ================= --> */
+
+.section2 {
+    background-color: #0B0E13;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* =================header============= */
+.section2 .header{
+    margin-bottom: 50px;
+}
+.section2 .header p{
+    color: #cbfe1c;
+    font-size: 16px ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.section2 .header p::before,
+.section2 .header p::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #cbfe1c;
+}
+.section2 .header p::before {
+    clip-path: polygon(0 50%, 15% 0, 100% 0, 100% 100%, 15% 100%);
+     background: linear-gradient(to left, #cbfe1c, transparent);
+}
+.section2 .header p::after {
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+     background: linear-gradient(to right, #cbfe1c, transparent);
+}
+.section2 .header h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #F1F1F1;
+}
+.section2 .header h4{
+    color: #F1F1F1;
+    font-size: 48px;
+    font-weight: bold;
+}
+.section2 .header span{
+    color: var(--main-color);
+}
+/* <!-- =================start cards================= --> */
+.section2 .cards .card1{
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: #1A1A1A;
+    padding: 24px;
+    border: 2px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.section2 .cards .card1:hover{
+    border: 2px solid var(--main-color);
+}
+.section2 .cards .card1 span{
+    color: var(--main-color);
+    background-color:var(--secondary-color);
+    width: 60px;
+    height: 60px;
+    margin-inline: auto;
+}
+.section2 .cards .card1:hover span{
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+
+}
+.section2 .cards i{
+    font-size: 25px;
+}
+.section2 .cards .card1 h2{
+    color: #F1F1F1;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.section2 .cards .card1 .box{
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    clip-path: polygon( 0 0, 100% 0, 0 100% );
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    transition: var(--transition);
+}
+.section2 .cards .card1 .box2{
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    clip-path: polygon( 0 0, 100% 0, 0 100% );
+    rotate: 180deg;
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    transition: var(--transition);
+}
+.section2 .cards .card1:hover .box{
+    top: 15px;
+    left: 15px;
+}
+.section2 .cards .card1:hover .box2{
+    bottom: 15px;
+    right: 15px;
+}
+.section2 .cards .card2{
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: #1A1A1A;
+    border: 2px solid var(--secondary-color);
+    overflow: hidden;
+} 
+.section2 .container::after{
+    content: "";
+    display: block;
+    width: 600px;
+    max-width: 85%;
+    height: 3px;
+    background:  linear-gradient(to right, #0B0E13 0%,#cbfe1c 10%,#cbfe1c 80%, #0B0E13 100% );
+    margin: 48px auto 0 ;
+    box-shadow: 0 0 10px 3px rgba(203, 254, 28, 0.35);
+}
+
+/* <!-- ==========end WHAT WE DO ========== --> */
+
+/* <!-- =================== start animation=============== --> */
+.animation {
+    background-color: #0B0E13;
+    position: relative;
+    overflow: hidden
+}
+.animation::before, 
+.animation::after {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+width: 120px;
+z-index: 2;
+pointer-events: none;
+}
+.animation::before {
+    left: 0;
+    background: linear-gradient(
+        to right,
+        #0B0E13,
+        transparent
+    );
+}
+.animation::after {
+    right: 0;
+    background: linear-gradient(
+        to left,
+        #0B0E13,
+        transparent
+    );
+}
+.animation .container-fluid{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: var(--section-padding);
+} 
+.animation .container-fluid::before { 
+    left: 0; 
+    background: linear-gradient( to right, #0B0E13, transparent ); 
+} 
+.animation .container-fluid::after { 
+    right: 0; 
+    background: linear-gradient( to left, #0B0E13, transparent ); 
+}
+.animation .container-fluid::before {
+    content: "";
+    position: absolute;
+
+    width: 90%;
+    height: 80%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(203, 254, 28, 0.5) 40%,
+        rgba(203, 254, 28, 0.25) 55%,
+        rgba(203, 254, 28, 0.08) 70%,
+        transparent 85%
+    );
+
+    filter: blur(25px);
+
+    z-index: -1;
+}
+.animation .img-track{
+    width: max-content;
+}
+.animation .img-track img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+.animation .track1{
+    animation: move-left 40s linear infinite;
+}
+.animation .track2{
+    animation: move-right 40s linear infinite;
+}
+@keyframes move-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes move-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* <!-- =================== end animation=============== --> */
+
+/* <!-- =====================strat our team================== --> */
+.our-team{
+    background-color: #0B0E13;
+}
+.our-team .container{
+    padding-block: var(--section-padding);
+}
+/* ===============header */
+.our-team .header{
+    padding-bottom: 64px;
+}
+.our-team .header span{
+    color: #cbfe1c;
+    font-size: 16px ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.our-team .header span::before,
+.our-team .header span::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #cbfe1c;
+}
+.our-team .header span::before {
+    clip-path: polygon(0 50%, 15% 0, 100% 0, 100% 100%, 15% 100%);
+    background: linear-gradient(to left, #cbfe1c, transparent);
+}
+.our-team .header span::after {
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+    background: linear-gradient(to right, #cbfe1c, transparent);
+}
+.our-team .header h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #F1F1F1;
+}
+.our-team .header p{
+    color: #8E96A3;
+    font-size: 20px ;
+    font-weight: 400;
+}
+/* ==================team cards */
+.our-team .card{
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.our-team .card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    backdrop-filter: grayscale(100%);
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none;
+}
+.our-team .card:hover::before {
+    transform: translateY(-100%); 
+}
+.our-team .card h5{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.our-team .card p{
+    color: #8E96A3;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.our-team .card .text{
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+    z-index: 1;
+    padding: 24px;
+    width: 85%;
+}
+.our-team .card .text span{
+    color: #cbfe1c;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.our-team .card .text .side{
+    rotate: 90deg;
+    padding: 0;
+    position: absolute;
+    right: -10%;
+    bottom: 40%;
+    transform: translateY(50%);
+}
+.our-team .card .text .side span{
+    font-size: 18px;
+    font-weight: 700
+}
+
+/* <!-- =====================end our team================== --> *
+
+/* <!-- ====================start CONTACT US=============== --> */
+/* ===============start header */
+.contact-us{
+    background-color: #0D131D;
+    padding-block: var(--section-padding);
+}
+.contact-us .header{
+    padding-bottom: 64px;
+}
+.contact-us .header span{
+    color: #cbfe1c;
+    font-size: 16px ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.contact-us .header span::before,
+.contact-us .header span::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #cbfe1c;
+}
+.contact-us .header span::before {
+    clip-path: polygon(0 50%, 15% 0, 100% 0, 100% 100%, 15% 100%);
+    background: linear-gradient(to left, #cbfe1c, transparent);
+}
+.contact-us .header span::after {
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+    background: linear-gradient(to right, #cbfe1c, transparent);
+}
+.contact-us .header h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #F1F1F1;
+}
+.contact-us .header p{
+    color: #8E96A3;
+    font-size: 20px ;
+    font-weight: 400;
+}
+/* ===================================row section*/
+/*   <!-- ==============start info --> */
+.contact-us .box1 .text{
+    
+}
+
+
+
+
+
+
+/* <!-- ====================end CONTACT US=============== --> */
